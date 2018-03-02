@@ -5,6 +5,8 @@ RUN sed -i 's/$/ 9.4/' /etc/apt/sources.list.d/pgdg.list
 RUN apt-get update && apt-get install -y --no-install-recommends \
 		postgresql-9.4=9.4.17-1.pgdg80+1 \
 		postgresql-contrib-9.4=9.4.17-1.pgdg80+1 \
+		postgresql-9.4-postgis-2.4=2.4.3+dfsg-2.pgdg80+1 \
+		postgresql-9.6-postgis-2.4=2.4.3+dfsg-2.pgdg80+1 \
 	&& rm -rf /var/lib/apt/lists/*
 
 ENV PGBINOLD /usr/lib/postgresql/9.4/bin
